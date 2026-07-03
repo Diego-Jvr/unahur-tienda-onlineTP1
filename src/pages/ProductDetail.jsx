@@ -53,9 +53,9 @@ function ProductDetail() {
           </Button>
 
           <Button
-              variant="success"
-              disabled={product.stock === 0}
-              onClick={() => addToCart(product)}
+            variant="success"
+            disabled={product.stock === 0}
+            onClick={() => addToCart(product)}
           >
             {product.stock === 0 ? "Sin stock" : "Agregar al carrito"}
           </Button>

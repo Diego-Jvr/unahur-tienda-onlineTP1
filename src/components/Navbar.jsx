@@ -1,7 +1,12 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 function Navigation() {
+
+  const { totalProducts } = useContext(CartContext);
+
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
@@ -17,7 +22,7 @@ function Navigation() {
           </Nav.Link>
 
           <Nav.Link as={Link} to="/cart">
-            Carrito
+            Carrito ({totalProducts})
           </Nav.Link>
 
           <Nav.Link as={Link} to="/contact">
