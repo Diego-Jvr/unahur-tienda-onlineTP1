@@ -1,16 +1,39 @@
-# React + Vite
+Trabajo Práctico N°1 - React
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Descripción
 
-Currently, two official plugins are available:
+GameStore es una tienda online de videojuegos donde el usuario puede navegar por un catálogo de productos, ver detalles de cada juego, agregarlos al carrito y finalizar una compra mediante un formulario.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+El proyecto fue realizado como práctica de React, aplicando conceptos como componentes, hooks y manejo de estado.
 
-## React Compiler
+## Tecnologías utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- React Router DOM
+- React Bootstrap
+- JavaScript
+- CSS
 
-## Expanding the Oxlint configuration
+## Instalación y ejecución
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+1. Clonar el repositorio:
+
+```bash
+git clone URL_DEL_REPOSITORIO
+```
+
+2. Instalar dependencias:
+
+```bash
+npm install
+```
+
+3. Ejecutar el proyecto:
+
+```bash
+npm run dev
+```
+
+## Integrantes
+
+- Diego Contreras

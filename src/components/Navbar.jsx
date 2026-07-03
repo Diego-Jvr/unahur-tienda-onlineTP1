@@ -8,8 +8,11 @@ function Navigation() {
   const { totalProducts } = useContext(CartContext);
 
   return (
+    
     <Navbar bg="dark" variant="dark" expand="lg">
+
       <Container>
+
         <Navbar.Brand>Tienda Online</Navbar.Brand>
 
         <Nav className="me-auto">
@@ -28,6 +31,7 @@ function Navigation() {
           <Nav.Link as={Link} to="/contact">
             Contacto
           </Nav.Link>
+
         </Nav>
       </Container>
     </Navbar>

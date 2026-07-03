@@ -3,14 +3,22 @@ import { createContext, useState } from "react";
 export const CartContext = createContext();
 
 function CartProvider({ children }) {
+  
   const [cart, setCart] = useState([]);
   const clearCart = () => {
   setCart([]);
   };
 
   const addToCart = (product) => {
+
     const existingProduct = cart.find((item) => item.id === product.id);
+
     if (existingProduct) {
+      if (existingProduct.quantity >= product.stock) {
+        alert("No hay más unidades disponibles.");
+        return;
+      }
+
       setCart(
         cart.map((item) =>
           item.id === product.id
@@ -19,6 +27,11 @@ function CartProvider({ children }) {
         )
       );
     } else {
+      if (product.stock === 0) {
+        alert("Producto sin stock.");
+        return;
+      }
+
       setCart([...cart, { ...product, quantity: 1 }]);
     }
   };
@@ -31,7 +44,10 @@ function CartProvider({ children }) {
     setCart(
       cart.map((item) => {
         if (item.id === id) {
-          if (item.quantity >= item.stock) return item;
+          if (item.quantity >= item.stock) {
+            alert("No hay más unidades disponibles.");
+            return item;
+          }
 
           return {
             ...item,
@@ -67,6 +83,7 @@ function CartProvider({ children }) {
   );
 
   return (
+    
     <CartContext.Provider
       value={{
           cart,

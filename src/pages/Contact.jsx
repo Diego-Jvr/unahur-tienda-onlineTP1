@@ -89,12 +89,17 @@ function Contact() {
 
         <Form.Group className="mb-3">
           <Form.Label>Teléfono</Form.Label>
-          <Form.Control
-            type="text"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-          />
+            <Form.Control
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={(e) =>
+                setFormData({
+                  ...formData,
+                  phone: e.target.value.replace(/\D/g, ""),
+                })
+              }
+            />
         </Form.Group>
 
         <Form.Group className="mb-3">

@@ -32,8 +32,12 @@ function ProductCard({ product }) {
         </Card.Text>
 
         <h5 className="mt-auto">
-          ${product.price}
+          ${product.price.toLocaleString("es-AR")}
         </h5>
+
+        <p>
+          <strong>Stock:</strong> {product.stock}
+        </p>
 
         <div className="d-flex justify-content-between mt-3">
 

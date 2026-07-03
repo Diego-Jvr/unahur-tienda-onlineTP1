@@ -32,7 +32,7 @@ function ProductDetail() {
           </Card.Text>
 
           <Card.Text>
-            <strong>Precio:</strong> ${product.price}
+            <strong>Precio:</strong> ${product.price.toLocaleString("es-AR")}
           </Card.Text>
 
           <Card.Text>
